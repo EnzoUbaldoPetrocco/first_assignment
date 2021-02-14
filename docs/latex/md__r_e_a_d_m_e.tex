@@ -1,0 +1,71 @@
+\subsection*{Introduction}
+
+This project involves the creation of two nodes within a package. The nodes are written in python and comunicate each other through \textquotesingle{}random\+Service.\+srv\textquotesingle{} message described in srv folder. \textquotesingle{}random\+Service.\+srv\textquotesingle{} request is composed by a pair of float32 variables that tell the server the interval within which the two random coordinates must be; the response contains the two coordinates.
+
+Both nodes are contained inside scripts folder.
+\begin{DoxyItemize}
+\item \textquotesingle{}/robot\+\_\+controller\textquotesingle{} controls the robot behavior in the way it can reach the target, if the target is reached calls again the server for a new position.
+\item \textquotesingle{}/\+Server\textquotesingle{} receive the request for a new target and sends the random target. (More information in docs folder)
+\end{DoxyItemize}
+
+\subsection*{Computational Graph}
+
+
+
+\subsection*{Considerations}
+
+This program contains some important semplifications\+: -\/\+The simulation is a 2D simulation -\/\+The robot is a non-\/holonomic robot -\/\+The target is reached indipendentely from the orientation
+
+So it is sufficient to set the 2D velocity /cmd\+\_\+vel, proportional to the distance vector between the corrent position (always updated thanks to Odometry) and the target position (given by Server). The proportional constant is set experimentaly, until an upper bound which guarantees that the robot doens\textquotesingle{}t pass over the target and must go back to reach it.
+
+\subsection*{Installation}
+
+Follow the guide for installing Ros (melodic version) Also is suggested to install python.
+
+Then it must be installed stage\+\_\+ros with the command\+: 
+\begin{DoxyCode}
+sudo apt-get install ros-<your\_ros\_version>-stage-ros
+\end{DoxyCode}
+
+
+\subsection*{How to run it}
+
+Now, let\textquotesingle{}s follow these simple step which will let the user to launch the program\+:
+
+Open the first terminal
+
+
+\begin{DoxyCode}
+roscore &
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+catkin\_make
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+rosrun stage\_ros stageros $(rospack find assignment1)/world/exercise.world
+\end{DoxyCode}
+
+
+Don\textquotesingle{}t close this terminal and open the second one
+
+
+\begin{DoxyCode}
+rosrun my\_assignment1 server.py
+\end{DoxyCode}
+
+
+Don\textquotesingle{}t close this terminal and open the third one
+
+
+\begin{DoxyCode}
+rosrun my\_assignment robot\_behavior.py
+\end{DoxyCode}
+
+
+Then, the 2\+D-\/robot should move, a 2D environment is opened and\+: -\/if you have a problem with the first terminal, try to check if ros is correctely installed and if stage\+\_\+ros is correctely installed -\/the second terminal should print on the screen\+: \textquotesingle{}Let\textquotesingle{}s serve! I\textquotesingle{}m executing the main \hyperlink{server_8py}{server.\+py}\textquotesingle{} and then advertise the user every time it is called which is the new target -\/the third terminal print on the screen\+: \textquotesingle{}Let\textquotesingle{}s control! I\textquotesingle{}m in the main function of \hyperlink{robot__behavior_8py}{robot\+\_\+behavior.\+py}\textquotesingle{} and then just tell if the target is reached or not and the next target when the target is reached. 

@@ -1,0 +1,98 @@
+\hypertarget{namespacerobot__behavior}{}\section{robot\+\_\+behavior Namespace Reference}
+\label{namespacerobot__behavior}\index{robot\+\_\+behavior@{robot\+\_\+behavior}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacerobot__behavior_a9aef922e5f68d8d4239416f1c17cdd1e}{main} ()
+\item 
+def \hyperlink{namespacerobot__behavior_a389417033272fd0abc7b55b57cf8aa06}{position\+Callback} (msg)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacerobot__behavior_afec75724c8502be2b13af611548e8ed5}{pub} = rospy.\+Publisher(\textquotesingle{}cmd\+\_\+vel\textquotesingle{}, Twist, queue\+\_\+size=100)
+\item 
+\hyperlink{namespacerobot__behavior_afe11a3139022cf72f927c89b3b7c8364}{client} = rospy.\+Service\+Proxy(\textquotesingle{}server\textquotesingle{}, random\+Service)
+\item 
+\hyperlink{namespacerobot__behavior_ad24b97ca826242e79a54d1ce7324de27}{response} = \hyperlink{namespacerobot__behavior_afe11a3139022cf72f927c89b3b7c8364}{client}(min=-\/6.\+0, max=6.\+0)
+\item 
+\hyperlink{namespacerobot__behavior_ab7c31583eff517c7c9ebcd4e2d498d8b}{x} = response.\+x
+\item 
+\hyperlink{namespacerobot__behavior_aa41f1e9f708b4470e60d2bffdd1d7433}{y} = response.\+y
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacerobot__behavior_a9aef922e5f68d8d4239416f1c17cdd1e}\label{namespacerobot__behavior_a9aef922e5f68d8d4239416f1c17cdd1e}} 
+\index{robot\+\_\+behavior@{robot\+\_\+behavior}!main@{main}}
+\index{main@{main}!robot\+\_\+behavior@{robot\+\_\+behavior}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def robot\+\_\+behavior.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file robot\+\_\+behavior.\+py.
+
+\mbox{\Hypertarget{namespacerobot__behavior_a389417033272fd0abc7b55b57cf8aa06}\label{namespacerobot__behavior_a389417033272fd0abc7b55b57cf8aa06}} 
+\index{robot\+\_\+behavior@{robot\+\_\+behavior}!position\+Callback@{position\+Callback}}
+\index{position\+Callback@{position\+Callback}!robot\+\_\+behavior@{robot\+\_\+behavior}}
+\subsubsection{\texorpdfstring{position\+Callback()}{positionCallback()}}
+{\footnotesize\ttfamily def robot\+\_\+behavior.\+position\+Callback (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file robot\+\_\+behavior.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerobot__behavior_afe11a3139022cf72f927c89b3b7c8364}\label{namespacerobot__behavior_afe11a3139022cf72f927c89b3b7c8364}} 
+\index{robot\+\_\+behavior@{robot\+\_\+behavior}!client@{client}}
+\index{client@{client}!robot\+\_\+behavior@{robot\+\_\+behavior}}
+\subsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily robot\+\_\+behavior.\+client = rospy.\+Service\+Proxy(\textquotesingle{}server\textquotesingle{}, random\+Service)}
+
+
+
+Definition at line 17 of file robot\+\_\+behavior.\+py.
+
+\mbox{\Hypertarget{namespacerobot__behavior_afec75724c8502be2b13af611548e8ed5}\label{namespacerobot__behavior_afec75724c8502be2b13af611548e8ed5}} 
+\index{robot\+\_\+behavior@{robot\+\_\+behavior}!pub@{pub}}
+\index{pub@{pub}!robot\+\_\+behavior@{robot\+\_\+behavior}}
+\subsubsection{\texorpdfstring{pub}{pub}}
+{\footnotesize\ttfamily robot\+\_\+behavior.\+pub = rospy.\+Publisher(\textquotesingle{}cmd\+\_\+vel\textquotesingle{}, Twist, queue\+\_\+size=100)}
+
+
+
+Definition at line 15 of file robot\+\_\+behavior.\+py.
+
+\mbox{\Hypertarget{namespacerobot__behavior_ad24b97ca826242e79a54d1ce7324de27}\label{namespacerobot__behavior_ad24b97ca826242e79a54d1ce7324de27}} 
+\index{robot\+\_\+behavior@{robot\+\_\+behavior}!response@{response}}
+\index{response@{response}!robot\+\_\+behavior@{robot\+\_\+behavior}}
+\subsubsection{\texorpdfstring{response}{response}}
+{\footnotesize\ttfamily robot\+\_\+behavior.\+response = \hyperlink{namespacerobot__behavior_afe11a3139022cf72f927c89b3b7c8364}{client}(min=-\/6.\+0, max=6.\+0)}
+
+
+
+Definition at line 18 of file robot\+\_\+behavior.\+py.
+
+\mbox{\Hypertarget{namespacerobot__behavior_ab7c31583eff517c7c9ebcd4e2d498d8b}\label{namespacerobot__behavior_ab7c31583eff517c7c9ebcd4e2d498d8b}} 
+\index{robot\+\_\+behavior@{robot\+\_\+behavior}!x@{x}}
+\index{x@{x}!robot\+\_\+behavior@{robot\+\_\+behavior}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily robot\+\_\+behavior.\+x = response.\+x}
+
+
+
+Definition at line 19 of file robot\+\_\+behavior.\+py.
+
+\mbox{\Hypertarget{namespacerobot__behavior_aa41f1e9f708b4470e60d2bffdd1d7433}\label{namespacerobot__behavior_aa41f1e9f708b4470e60d2bffdd1d7433}} 
+\index{robot\+\_\+behavior@{robot\+\_\+behavior}!y@{y}}
+\index{y@{y}!robot\+\_\+behavior@{robot\+\_\+behavior}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily robot\+\_\+behavior.\+y = response.\+y}
+
+
+
+Definition at line 20 of file robot\+\_\+behavior.\+py.
+
