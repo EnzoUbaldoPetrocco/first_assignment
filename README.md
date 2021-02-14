@@ -1,7 +1,7 @@
 
-	# The first assignment
+# The first assignment
 
-	## Introduction
+## Introduction
 This project involves the creation of two nodes within a package.
 The nodes are written in python and comunicate each other through 'randomService.srv' message described in srv folder.
 'randomService.srv' request is composed by a pair of float32 variables that tell the server the interval within which the two random coordinates must be; the response contains the two coordinates.
@@ -11,14 +11,14 @@ Both nodes are contained inside scripts folder.
 - '/Server' receive the request for a new target and sends the random target.
 (More information in docs folder)
 
-	## Computational Graph
+## Computational Graph
 
 
 
 
 
 
-	## Considerations
+## Considerations
 This program contains some important semplifications:
 -The simulation is a 2D simulation
 -The robot is a non-holonomic robot
@@ -27,38 +27,38 @@ This program contains some important semplifications:
 So it is sufficient to set the 2D velocity /cmd_vel, proportional to the distance vector between the corrent position (always updated thanks to Odometry) and the target position (given by Server).
 The proportional constant is set experimentaly, until an upper bound which guarantees that the robot doens't pass over the target and must go back to reach it.
 
-	## Installation
+## Installation
 Follow the guide for installing Ros (melodic version)
 Also is suggested to install python.
 
 Then it must be installed stage_ros with the command:
-	```console
-	sudo apt-get install ros-<your_ros_version>-stage-ros
-	```
+```shellscript
+sudo apt-get install ros-<your_ros_version>-stage-ros
+```
 
-	##How to run it
+## How to run it
 Now, let's follow these simple step which will let the user to launch the program:
 
 Open the first terminal
 
-	```console
+	```shellscript
 	roscore &
 	```
 
 
-	```console
+	```shellscript
 	catkin_make
 	```
 
 
-	```console
+	```shellscript
 	rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
 	```
 
 
 Don't close this terminal and open the second one
 
-	```console
+	```shellscript
 	rosrun my_assignment1 server.py
 	```
 
@@ -66,7 +66,7 @@ Don't close this terminal and open the second one
 Don't close this terminal and open the third one
 	
 	
-	```console
+	```shellscript
 	rosrun my_assignment robot_behavior.py
 	```
 
