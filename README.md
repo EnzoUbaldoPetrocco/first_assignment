@@ -41,34 +41,34 @@ Now, let's follow these simple step which will let the user to launch the progra
 
 Open the first terminal
 
-	```shellscript
-	roscore &
-	```
+```shellscript
+roscore &
+```
 
 
-	```shellscript
-	catkin_make
-	```
+```shellscript
+catkin_make
+```
 
 
-	```shellscript
-	rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
-	```
+```shellscript
+rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
+```
 
 
 Don't close this terminal and open the second one
 
-	```shellscript
-	rosrun my_assignment1 server.py
-	```
+```shellscript
+rosrun my_assignment1 server.py
+```
 
 
 Don't close this terminal and open the third one
 	
 	
-	```shellscript
-	rosrun my_assignment robot_behavior.py
-	```
+```shellscript
+rosrun my_assignment robot_behavior.py
+```
 
 
 Then, the 2D-robot should move, a 2D environment is opened and:
