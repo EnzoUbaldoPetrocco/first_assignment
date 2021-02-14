@@ -32,7 +32,7 @@ Follow the guide for installing Ros (melodic version)
 Also is suggested to install python.
 
 Then it must be installed stage_ros with the command:
-```shellscript
+```bash
 sudo apt-get install ros-<your_ros_version>-stage-ros
 ```
 
@@ -41,24 +41,24 @@ Now, let's follow these simple step which will let the user to launch the progra
 
 Open the first terminal
 
-```shellscript
+```bash
 roscore &
 ```
 
 
-```shellscript
+```bash
 catkin_make
 ```
 
 
-```shellscript
+```bash
 rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
 ```
 
 
 Don't close this terminal and open the second one
 
-```shellscript
+```bash
 rosrun my_assignment1 server.py
 ```
 
@@ -66,7 +66,7 @@ rosrun my_assignment1 server.py
 Don't close this terminal and open the third one
 	
 	
-```shellscript
+```bash
 rosrun my_assignment robot_behavior.py
 ```
 
