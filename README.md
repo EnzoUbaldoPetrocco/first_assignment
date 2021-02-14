@@ -13,7 +13,7 @@ Both nodes are contained inside scripts folder.
 
 ## Computational Graph
 
-
+![rosgraph_assignment1](https://user-images.githubusercontent.com/48513075/107881507-f9f34280-6ee4-11eb-9157-cfcb4cc67ac0.png)
 
 
 
