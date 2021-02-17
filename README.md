@@ -67,7 +67,7 @@ Don't close this terminal and open the third one
 	
 	
 ```bash
-rosrun my_assignment robot_behavior.py
+rosrun my_assignment1 robot_behavior.py
 ```
 
 
